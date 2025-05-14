@@ -41,14 +41,15 @@ def enviar_arquivos_minio(diretorio_base, bucket_name, endpoint_url, access_key,
     falha = []
     for raiz, _, arquivos in os.walk(diretorio_base):
         pasta += 1
-        for arquivo in arquivos:
+        total_files = len(arquivos)
+        print(f"[✔]               ----> Encontrado: {total_files} na pasta!!!")
+        for i, arquivo in enumerate(arquivos, start=1):
             arq += 1
             caminho_absoluto = os.path.join(raiz, arquivo)
             caminho_relativo = os.path.relpath(
                 caminho_absoluto, diretorio_base)
             chave_s3 = caminho_relativo.replace(os.sep, '/')
-
-            lg = chave_s3[:15] + '...' + chave_s3[-10:]
+            lg = f"{chave_s3[:15]}...{chave_s3[-10:]} F: {i}/{total_files}"
             # Verifica se o arquivo Existe
             try:
                 s3.head_object(Bucket=bucket_name, Key=chave_s3)
@@ -78,8 +79,8 @@ bucket = 'log'
 folder_base = f'/home/usuario/minio_data/{bucket}'
 
 endpoint = 'http://10.10.0.10:9000'  # Endpoint do MinIO
-access_key = 'root_minio'                 # MINIO_ROOT_USER
-secret_key = 'SuperSenhaRootM'  # MINIO_ROOT_PASSWORD
+access_key = 'root_minio'            # MINIO_ROOT_USER
+secret_key = 'SuperSenhaRootM'       # MINIO_ROOT_PASSWORD
 
 enviar_arquivos_minio(folder_base, bucket, endpoint,
                       access_key, secret_key)
