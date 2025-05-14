@@ -3,7 +3,7 @@ Responsável por migrar todos os arquivos do Minio S3 da versão antiga (até **
 
 A Finalidade desse Código é com base em uma Pasta do computador, realizar o envio de todos os arquivos de forma recursiva, mantendo a mesma extrutura.
 
-Após a versão **RELEASE.2021-11-05T09-16-26Z**, o Minio mudou a forma de armazenamento dos arquivos, de forma a nao manter o formato tradicional de visualização dos sistemas operacionais. Sendo assim não existe a compatibilidade entre versões menores ou iguais a **RELEASE.2021-11-05T09-16-26Z**, e as versões posterior. Sendo necessário a migração dos dados.
+Após a versão **RELEASE.2021-11-05T09-16-26Z**, o Minio mudou a forma de armazenamento dos arquivos, de forma a nao manter o formato tradicional de visualização dos sistemas operacionais. Sendo assim não existe a compatibilidade entre versões menores ou iguais a **RELEASE.2021-11-05T09-16-26Z**, e as versões posteriores. Sendo necessário a migração dos dados.
 Para quem busca um método seguro e Prático de migração dos dados, segue o Código em Python3 para realizar essa tarefa.
 
 # Requisitos:
