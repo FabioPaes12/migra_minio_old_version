@@ -1,9 +1,9 @@
 # Migração de Arquivos de Versões Antigas do MinIO
-Responsável por migrar todos os arquivos do Minio S3 da versão antiga (até RELEASE.2021-11-05T09-16-26Z), para a versão atual.
+Responsável por migrar todos os arquivos do Minio S3 da versão antiga (até **RELEASE.2021-11-05T09-16-26Z**), para a versão atual.
 
 A Finalidade desse Código é com base em uma Pasta do computador, realizar o envio de todos os arquivos de forma recursiva, mantendo a mesma extrutura.
 
-Após a versão RELEASE.2021-11-05T09-16-26Z, o Minio mudou a forma de armazenamento dos arquivos, de forma a nao manter o formato tradicional de visualização dos sistemas operacionais. Sendo assim não existe a compatibilidade entre versões menores ou iguais a RELEASE.2021-11-05T09-16-26Z, e as versões posterior. Sendo necessário a migração dos dados.
+Após a versão **RELEASE.2021-11-05T09-16-26Z**, o Minio mudou a forma de armazenamento dos arquivos, de forma a nao manter o formato tradicional de visualização dos sistemas operacionais. Sendo assim não existe a compatibilidade entre versões menores ou iguais a **RELEASE.2021-11-05T09-16-26Z**, e as versões posterior. Sendo necessário a migração dos dados.
 Para quem busca um método seguro e Prático de migração dos dados, segue o Código em Python3 para realizar essa tarefa.
 
 # Requisitos:
@@ -15,9 +15,13 @@ Para quem busca um método seguro e Prático de migração dos dados, segue o C�
 2. - Copie o arquivo main.py;
 3. - Instale o pré requisito em seu projeto através do comando pip3 install boto3
 4. - Altere as Variáveis de acordo com o seu ambiente de trabalho, sendo:
+     
         4.1. diretorio_base: RECEBE O CAMINHO ABSOLUTO DA PASTA
+     
         4.2. bucket_name: RECEBE O NOME DA PASTA BASE QUE SERÁ CRIADA NO MINIO, SE NAO EXISTIR
+     
         4.3. endpoint_url: URL DO MINIO:PORTA
+     
         4.4. access_key e secret_key: SÃO AS CREDENCIAIS DE ACESSO AO MINIO.
 
 
