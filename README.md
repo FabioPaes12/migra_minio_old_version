@@ -7,8 +7,8 @@ Após a versão RELEASE.2021-11-05T09-16-26Z, o Minio mudou a forma de armazenam
 Para quem busca um método seguro e Prático de migração dos dados, segue o Código em Python3 para realizar essa tarefa.
 
 # Requisitos:
-*Python3*
-*Boto3*
+*Python3*.
+*Boto3*.
 
 # Como Rodar o projeto:
 1 - Crie um projeto python de sua preferência;
